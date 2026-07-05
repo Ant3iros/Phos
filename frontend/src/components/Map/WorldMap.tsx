@@ -53,6 +53,9 @@ const NUMERIC_TO_ALPHA3: Record<string, string> = {
   '740': 'SUR', '748': 'SWZ', '762': 'TJK', '768': 'TGO', '780': 'TTO',
   '788': 'TUN', '795': 'TKM', '800': 'UGA', '807': 'MKD', '834': 'TZA',
   '854': 'BFA', '858': 'URY', '860': 'UZB', '887': 'YEM', '894': 'ZMB',
+  // Small island states & micro-states
+  '174': 'COM', '132': 'CPV', '480': 'MUS', '690': 'SYC', '678': 'STP',
+  '462': 'MDV', '470': 'MLT', '702': 'SGP', '048': 'BHR',
 }
 
 // English names for non-game countries (game countries use scenario data)
@@ -254,6 +257,20 @@ const CAPITALS: Record<string, { name: string; coords: [number, number] }> = {
   BWA: { name: 'Gaborone',        coords: [ 25.9, -24.7] },
   LSO: { name: 'Maseru',          coords: [ 27.5, -29.3] },
   SWZ: { name: 'Mbabane',         coords: [ 31.1, -26.3] },
+  // Small island states & micro-states
+  COM: { name: 'Moroni',          coords: [ 43.3, -11.7] },
+  CPV: { name: 'Praia',           coords: [-23.5,  14.9] },
+  MUS: { name: 'Port-Louis',      coords: [ 57.5, -20.2] },
+  SYC: { name: 'Victoria',        coords: [ 55.5,  -4.6] },
+  STP: { name: 'São Tomé',        coords: [  6.7,   0.3] },
+  MDV: { name: 'Malé',            coords: [ 73.5,   4.2] },
+  MLT: { name: 'Valletta',        coords: [ 14.5,  35.9] },
+  SGP: { name: 'Singapore',       coords: [103.9,   1.3] },
+  BHR: { name: 'Manama',          coords: [ 50.6,  26.2] },
+  BRN: { name: 'Bandar Seri Begawan', coords: [114.9, 4.9] },
+  FJI: { name: 'Suva',            coords: [178.4, -18.1] },
+  PNG: { name: 'Port Moresby',    coords: [147.2,  -9.5] },
+  TLS: { name: 'Dili',            coords: [125.6,  -8.6] },
 }
 
 const REGIONS: { name: string; coords: [number, number]; color: string }[] = [
@@ -297,6 +314,8 @@ const GAME_COUNTRY_IDS = new Set([
   'UGA','RWA','BDI','SSD','ERI','DJI',
   // Africa – Southern
   'MOZ','MDG','MWI','NAM','BWA','LSO','SWZ',
+  // Small island states & micro-states
+  'COM','CPV','MUS','SYC','STP','MDV','MLT','SGP','BHR','BRN','FJI','PNG','TLS',
 ])
 
 function getRelationColor(score: number): string {

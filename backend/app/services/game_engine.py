@@ -801,9 +801,10 @@ def _check_stability_crisis(session: GameSession) -> None:
 
 def _ensure_region_state(session: GameSession) -> dict:
     if not isinstance(session.region_state, dict):
-        session.region_state = {"occupied": {}, "independent": {}}
+        session.region_state = {"occupied": {}, "independent": {}, "wars": {}}
     session.region_state.setdefault("occupied", {})
     session.region_state.setdefault("independent", {})
+    session.region_state.setdefault("wars", {})
     return session.region_state
 
 
@@ -829,6 +830,9 @@ def _trigger_alliance_defense(session: GameSession, attacker: str, defender: str
 
     for alliance_id, alliance in scenario.alliances.items():
         if defender not in alliance.members:
+            continue
+        # Guerre interne à l'alliance : la clause de défense collective ne s'applique pas
+        if attacker in alliance.members:
             continue
         for ally_id in alliance.members:
             if ally_id in (defender, attacker):
@@ -864,8 +868,75 @@ def _trigger_alliance_defense(session: GameSession, attacker: str, defender: str
                 ))
 
 
+def _country_display_name(session: GameSession, country_id: str) -> str:
+    scenario = load_scenario(session.scenario_id)
+    if scenario and country_id in scenario.countries:
+        return scenario.countries[country_id].name
+    dyn = session.dynamic_countries.get(country_id)
+    if dyn:
+        return dyn.get("name", country_id)
+    return country_id
+
+
+def _war_state(rs: dict, a_id: str, b_id: str) -> dict:
+    """Per-pair war tracker: months of fighting + territorial control lost (0-100) per side."""
+    key = "|".join(sorted([a_id, b_id]))
+    wars = rs.setdefault("wars", {})
+    return wars.setdefault(key, {"months": 0, "control_loss": {a_id: 0.0, b_id: 0.0}})
+
+
+def _apply_war_attrition(session: GameSession, country_id: str, months_at_war: int):
+    """Fighting a war bleeds stability and economy every month, worse as the war drags on."""
+    state = session.country_states.get(country_id)
+    if not state:
+        return
+    stab_cost = 1 if months_at_war < 6 else 2
+    state["stability"] = max(0, round(state.get("stability", 50) - stab_cost))
+    session.country_states[country_id] = state
+    _apply_economy_delta(session, country_id, -0.003 - 0.001 * min(6, months_at_war // 3))
+
+
+def _end_war(session: GameSession, winner: str, loser: str, rs: dict):
+    """Capitulation: the war ends, the loser takes a heavy stability hit."""
+    for cid, other in [(winner, loser), (loser, winner)]:
+        state = session.country_states.get(cid, {})
+        if other in state.get("at_war_with", []):
+            state["at_war_with"] = [e for e in state["at_war_with"] if e != other]
+            session.country_states[cid] = state
+    loser_state = session.country_states.get(loser, {})
+    loser_state["stability"] = max(0, round(loser_state.get("stability", 50) - 15))
+    rel = loser_state.get("relations", {})
+    rel[winner] = -80
+    loser_state["relations"] = rel
+    session.country_states[loser] = loser_state
+    rs.get("wars", {}).pop("|".join(sorted([winner, loser])), None)
+
+    from app.models.game import WorldEvent
+    session.world_events.append(WorldEvent(
+        title=f"Capitulation de {_country_display_name(session, loser)}",
+        description=(
+            f"Épuisé et débordé sur tous les fronts, {_country_display_name(session, loser)} capitule "
+            f"face à {_country_display_name(session, winner)}. Les territoires occupés restent sous "
+            f"contrôle du vainqueur en attendant un règlement politique."
+        ),
+        affected_countries=[winner, loser],
+        year=session.year,
+        month=session.month,
+        type="military",
+    ))
+
+
 def _progress_war_invasions(session: GameSession):
-    """Each month: warring sides may capture a region of the opponent (30 % chance)."""
+    """Monthly war resolution — progressive front, no blitz total.
+
+    - Both sides pay attrition (stability + economy) each month of guerre.
+    - The attacking side is drawn proportionally to military power (the weaker side
+      can still lancer une contre-offensive).
+    - An offensive succeeds with a probability bounded by the power ratio, then
+      captures ONE region (pays with admin-1 data) or grignote un % de contrôle
+      territorial (autres pays). Priorité à la libération de ses propres régions.
+    - When all regions (or 100 % du contrôle) are lost, the defender capitulates.
+    """
     import random
     from app.data.regions import get_country_regions, SUPPORTED_COUNTRIES
 
@@ -875,48 +946,125 @@ def _progress_war_invasions(session: GameSession):
         for enemy in state.get("at_war_with", []):
             war_pairs.add(tuple(sorted([cid, enemy])))
 
+    # Purge war trackers for wars that ended
+    active_keys = {"|".join(p) for p in war_pairs}
+    rs["wars"] = {k: v for k, v in rs.get("wars", {}).items() if k in active_keys}
+
     for (a_id, b_id) in war_pairs:
-        if random.random() > 0.30:
+        war = _war_state(rs, a_id, b_id)
+        war["months"] = war.get("months", 0) + 1
+
+        # 1. Attrition for both belligerents
+        _apply_war_attrition(session, a_id, war["months"])
+        _apply_war_attrition(session, b_id, war["months"])
+
+        a_pow = max(0.1, _get_military_power(session, a_id))
+        b_pow = max(0.1, _get_military_power(session, b_id))
+
+        # 2. Who takes the offensive this month? Weighted by power, not automatic.
+        attacker, defender = (a_id, b_id) if random.random() < a_pow / (a_pow + b_pow) else (b_id, a_id)
+        atk_pow = a_pow if attacker == a_id else b_pow
+        def_pow = b_pow if attacker == a_id else a_pow
+
+        # 3. Offensive success: bounded, ratio-based, dampened by war fatigue
+        ratio = atk_pow / def_pow
+        base_chance = min(0.40, 0.12 + 0.10 * ratio)
+        fatigue = 0.9 ** (war["months"] // 6)
+        if random.random() > base_chance * fatigue:
             continue
-        a_pow = _get_military_power(session, a_id)
-        b_pow = _get_military_power(session, b_id)
 
-        # Stronger side attacks
-        if a_pow >= b_pow:
-            attacker, defender = a_id, b_id
-        else:
-            attacker, defender = b_id, a_id
-
-        if defender not in SUPPORTED_COUNTRIES:
-            continue
-
-        all_regions = get_country_regions(defender)
-        free_regions = [
-            r for r in all_regions
-            if r["adm1_code"] not in rs["occupied"]
-            and r["adm1_code"] not in rs["independent"]
+        # 4a. Counter-offensive: retake one of your own occupied regions first
+        own_occupied = [
+            code for code, occ in rs["occupied"].items()
+            if occ.get("country_id") == attacker and occ.get("occupied_by") == defender
         ]
-        if not free_regions:
+        if own_occupied:
+            code = random.choice(own_occupied)
+            region_name = rs["occupied"][code].get("region_name", code)
+            rs["occupied"].pop(code, None)
+            from app.models.game import WorldEvent
+            session.world_events.append(WorldEvent(
+                title=f"Contre-offensive : {region_name} libérée",
+                description=(
+                    f"Les forces de {_country_display_name(session, attacker)} reprennent la région "
+                    f"{region_name} occupée par {_country_display_name(session, defender)}."
+                ),
+                affected_countries=[attacker, defender],
+                year=session.year,
+                month=session.month,
+                type="military",
+            ))
             continue
 
-        region = random.choice(free_regions)
-        rs["occupied"][region["adm1_code"]] = {
-            "occupied_by": attacker,
-            "country_id": defender,
-            "region_name": region.get("name_fr") or region["name"],
-        }
-        from app.models.game import WorldEvent
-        session.world_events.append(WorldEvent(
-            title=f"Invasion : {region.get('name_fr') or region['name']}",
-            description=(
-                f"Les forces de {attacker} ont pris le contrôle de la région "
-                f"{region.get('name_fr') or region['name']} ({defender})."
-            ),
-            affected_countries=[attacker, defender],
-            year=session.year,
-            month=session.month,
-        ))
-        _trigger_alliance_defense(session, attacker, defender)
+        # 4b. Offensive on defender territory
+        if defender in SUPPORTED_COUNTRIES:
+            all_regions = get_country_regions(defender)
+            free_regions = [
+                r for r in all_regions
+                if r["adm1_code"] not in rs["occupied"]
+                and r["adm1_code"] not in rs["independent"]
+            ]
+            if not free_regions:
+                _end_war(session, attacker, defender, rs)
+                continue
+
+            region = random.choice(free_regions)
+            region_name = region.get("name_fr") or region["name"]
+            rs["occupied"][region["adm1_code"]] = {
+                "occupied_by": attacker,
+                "country_id": defender,
+                "region_name": region_name,
+            }
+            # Losing a region hurts: stability and economy of the defender
+            def_state = session.country_states.get(defender, {})
+            def_state["stability"] = max(0, round(def_state.get("stability", 50) - 3))
+            session.country_states[defender] = def_state
+            _apply_economy_delta(session, defender, -0.02)
+
+            from app.models.game import WorldEvent
+            session.world_events.append(WorldEvent(
+                title=f"Front : {region_name} tombe",
+                description=(
+                    f"Après de durs combats, les forces de {_country_display_name(session, attacker)} "
+                    f"prennent le contrôle de la région {region_name} "
+                    f"({_country_display_name(session, defender)})."
+                ),
+                affected_countries=[attacker, defender],
+                year=session.year,
+                month=session.month,
+                type="military",
+            ))
+            _trigger_alliance_defense(session, attacker, defender)
+
+            if len(free_regions) <= 1:
+                _end_war(session, attacker, defender, rs)
+        else:
+            # Country without admin-1 data: territorial control percentage
+            loss = war["control_loss"].get(defender, 0.0) + random.uniform(8, 18)
+            war["control_loss"][defender] = round(min(100.0, loss), 1)
+
+            def_state = session.country_states.get(defender, {})
+            def_state["stability"] = max(0, round(def_state.get("stability", 50) - 3))
+            session.country_states[defender] = def_state
+            _apply_economy_delta(session, defender, -0.02)
+
+            from app.models.game import WorldEvent
+            session.world_events.append(WorldEvent(
+                title=f"Offensive contre {_country_display_name(session, defender)}",
+                description=(
+                    f"Les forces de {_country_display_name(session, attacker)} progressent : "
+                    f"{war['control_loss'][defender]:.0f} % du territoire de "
+                    f"{_country_display_name(session, defender)} est sous leur contrôle."
+                ),
+                affected_countries=[attacker, defender],
+                year=session.year,
+                month=session.month,
+                type="military",
+            ))
+            _trigger_alliance_defense(session, attacker, defender)
+
+            if war["control_loss"][defender] >= 100.0:
+                _end_war(session, attacker, defender, rs)
 
 
 def get_region_state(session_id: str) -> Optional[dict]:

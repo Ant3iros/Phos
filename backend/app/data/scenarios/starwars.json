@@ -1,0 +1,389 @@
+{
+  "id": "starwars",
+  "name": "Star Wars — An 0 (Bataille de Yavin)",
+  "description": "La galaxie est sous la poigne de fer de l'Empire Galactique. Mais la destruction de l'Étoile de la Mort à Yavin vient de prouver que l'Empire n'est pas invincible. L'Alliance Rebelle prend son essor dans la Bordure Extérieure, les Hutts prospèrent dans le chaos, et aux confins des Régions Inconnues, l'Ascendance Chiss observe.",
+  "start_year": 0,
+  "start_month": 1,
+  "map_style": "custom",
+  "custom_map_id": "aa570000-c000-4000-b000-000050000001",
+  "custom_map_feature_id_property": "id",
+  "initial_territories": {
+    "deep_core": "EMPIRE",
+    "core_worlds": "EMPIRE",
+    "colonies": "EMPIRE",
+    "inner_rim": "EMPIRE",
+    "expansion_region": "EMPIRE",
+    "mid_rim": "EMPIRE",
+    "outer_rim": "REBELS",
+    "hutt_space": "HUTTS",
+    "corporate_sector": "CSA",
+    "mandalore_sector": "MANDO",
+    "unknown_regions": "CHISS"
+  },
+  "custom": false,
+  "alliances": {
+    "NEW_ORDER": {
+      "id": "NEW_ORDER",
+      "name": "Ordre Nouveau",
+      "type": "political",
+      "members": ["EMPIRE", "CSA"],
+      "description": "L'Empire Galactique et ses partenaires corporatistes, unis pour maintenir l'ordre... et les profits.",
+      "color": "#4b5563"
+    }
+  },
+  "initial_events": [
+    {
+      "title": "L'Étoile de la Mort détruite à Yavin",
+      "description": "Un chasseur rebelle a détruit la station de combat impériale Étoile de la Mort lors de la bataille de Yavin. La nouvelle se répand comme une traînée de poudre : l'Empire peut être vaincu. Des cellules rebelles se déclarent dans toute la Bordure Extérieure.",
+      "year": 0,
+      "month": 1,
+      "affected_countries": ["EMPIRE", "REBELS"]
+    },
+    {
+      "title": "Représailles impériales",
+      "description": "Fou de rage, l'Empereur ordonne la traque systématique de l'Alliance Rebelle. La flotte de Dark Vador quadrille la Bordure Extérieure, et la doctrine de la peur remplace définitivement le Sénat, dissous quelques semaines plus tôt.",
+      "year": 0,
+      "month": 1,
+      "affected_countries": ["EMPIRE", "REBELS", "HUTTS"]
+    },
+    {
+      "title": "Les Hutts profitent du chaos",
+      "description": "Avec l'Empire concentré sur la Rébellion, les cartels Hutts étendent leurs réseaux de contrebande, d'épices et de primes. Jabba le Hutt met à prix la tête de plusieurs contrebandiers ayant des dettes envers lui.",
+      "year": 0,
+      "month": 2,
+      "affected_countries": ["HUTTS", "EMPIRE"]
+    }
+  ],
+  "countries": {
+    "EMPIRE": {
+      "id": "EMPIRE",
+      "name": "Empire Galactique",
+      "flag": "⚫",
+      "capital": "Coruscant (Noyau Profond)",
+      "continent": "Mondes du Noyau",
+      "population": 1000000000000000,
+      "government_type": "Autocratie Impériale",
+      "ideology": "Ordre Nouveau",
+      "leader": "Empereur Palpatine (Dark Sidious)",
+      "alliances": ["NEW_ORDER"],
+      "economy": {
+        "gdp": 8000000,
+        "gdp_per_capita": 8000,
+        "gdp_growth": 1.5,
+        "inflation": 6.0,
+        "unemployment": 9.0,
+        "debt_pct_gdp": 120.0,
+        "budget_balance_pct_gdp": -10.0,
+        "currency": "Crédits Impériaux",
+        "main_sectors": ["Industrie militaire", "Chantiers navals de Kuat", "Extraction minière", "Bureaucratie impériale"],
+        "sectors": {"guerre": 45.0, "industrie": 35.0, "services": 20.0}
+      },
+      "military": {
+        "strength": 9,
+        "active_personnel": 25000000000,
+        "nuclear_weapons": true,
+        "defense_budget_pct": 40.0,
+        "equipment": {
+          "destroyers_stellaires": 25000,
+          "chasseurs_TIE": 2000000,
+          "stormtroopers": 10000000000,
+          "marcheurs_AT_AT": 500000
+        }
+      },
+      "national_stats": {
+        "sovereignty": 90.0,
+        "food_autonomy": 70.0,
+        "energy_autonomy": 85.0,
+        "economic_independence": 85.0,
+        "security": 55.0
+      },
+      "relations": {
+        "REBELS": -100,
+        "HUTTS": -20,
+        "CSA": 50,
+        "MANDO": -30,
+        "CHISS": -10
+      },
+      "personality_traits": ["autoritaire", "belliqueux", "dogmatique"],
+      "personality": "L'Empire gouverne par la peur (doctrine Tarkin) et écrase toute dissidence avec une force disproportionnée. Sa bureaucratie est colossale mais sa flotte est sans égale. Palpatine manipule les événements dans l'ombre et tolère mal l'échec de ses subordonnés.",
+      "description": "Né des cendres de la République, l'Empire Galactique contrôle la quasi-totalité de la galaxie civilisée. Après la dissolution du Sénat et la perte de l'Étoile de la Mort, il ne repose plus que sur la terreur militaire.",
+      "color": "#374151",
+      "initial_stability": 65
+    },
+    "REBELS": {
+      "id": "REBELS",
+      "name": "Alliance Rebelle",
+      "flag": "🔴",
+      "capital": "Base mobile (Bordure Extérieure)",
+      "continent": "Bordure Extérieure",
+      "population": 50000000000,
+      "government_type": "Alliance de cellules",
+      "ideology": "Restauration de la République",
+      "leader": "Mon Mothma (Chancelière de l'Alliance)",
+      "alliances": [],
+      "economy": {
+        "gdp": 120000,
+        "gdp_per_capita": 2400,
+        "gdp_growth": 3.0,
+        "inflation": 10.0,
+        "unemployment": 15.0,
+        "debt_pct_gdp": 60.0,
+        "budget_balance_pct_gdp": -5.0,
+        "currency": "Crédits (donateurs)",
+        "main_sectors": ["Dons de mondes sympathisants", "Contrebande", "Guérilla", "Diplomatie clandestine"],
+        "sectors": {"guerre": 50.0, "services": 30.0, "contrebande": 20.0}
+      },
+      "military": {
+        "strength": 4,
+        "active_personnel": 2000000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 60.0,
+        "equipment": {
+          "chasseurs_X_wing": 5000,
+          "croiseurs_mon_calamari": 60,
+          "corvettes_corelliennes": 400,
+          "cellules_de_resistance": 10000
+        }
+      },
+      "national_stats": {
+        "sovereignty": 30.0,
+        "food_autonomy": 40.0,
+        "energy_autonomy": 35.0,
+        "economic_independence": 25.0,
+        "security": 30.0
+      },
+      "relations": {
+        "EMPIRE": -100,
+        "HUTTS": 0,
+        "CSA": -40,
+        "MANDO": 10,
+        "CHISS": 0
+      },
+      "personality_traits": ["idéaliste", "audacieux", "clandestin"],
+      "personality": "L'Alliance frappe vite et disparaît : sabotages, raids éclairs, propagande. Elle évite la bataille rangée face à la flotte impériale et compte sur les sympathies populaires et les défections. Mon Mothma privilégie la légitimité politique, les généraux l'action directe.",
+      "description": "Coalition de cellules de résistance, de sénateurs dissidents et de mondes opprimés, l'Alliance Rebelle vient de remporter sa première grande victoire à Yavin. Elle reste militairement très inférieure à l'Empire mais son influence grandit.",
+      "color": "#dc2626",
+      "initial_stability": 55
+    },
+    "HUTTS": {
+      "id": "HUTTS",
+      "name": "Cartels Hutts",
+      "flag": "🟢",
+      "capital": "Nal Hutta (Espace Hutt)",
+      "continent": "Espace Hutt",
+      "population": 800000000000,
+      "government_type": "Conseil des Anciens (Kajidics)",
+      "ideology": "Profit / Criminalité organisée",
+      "leader": "Jabba Desilijic Tiure",
+      "alliances": [],
+      "economy": {
+        "gdp": 900000,
+        "gdp_per_capita": 1125,
+        "gdp_growth": 4.5,
+        "inflation": 12.0,
+        "unemployment": 20.0,
+        "debt_pct_gdp": 10.0,
+        "budget_balance_pct_gdp": 5.0,
+        "currency": "Crédits / Wupiupi",
+        "main_sectors": ["Contrebande", "Épices", "Jeux et paris", "Chasseurs de primes", "Esclavage"],
+        "sectors": {"contrebande": 45.0, "jeux": 30.0, "services": 25.0}
+      },
+      "military": {
+        "strength": 3,
+        "active_personnel": 50000000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 15.0,
+        "equipment": {
+          "vaisseaux_de_contrebande": 100000,
+          "mercenaires": 20000000,
+          "chasseurs_de_primes": 50000,
+          "barges_a_voiles": 5000
+        }
+      },
+      "national_stats": {
+        "sovereignty": 65.0,
+        "food_autonomy": 55.0,
+        "energy_autonomy": 50.0,
+        "economic_independence": 75.0,
+        "security": 40.0
+      },
+      "relations": {
+        "EMPIRE": -20,
+        "REBELS": 0,
+        "CSA": 20,
+        "MANDO": 10,
+        "CHISS": 0
+      },
+      "personality_traits": ["opportuniste", "corrompu", "pragmatique"],
+      "personality": "Les Hutts ne prennent parti que lorsque c'est rentable. Ils vendent aux deux camps, achètent les fonctionnaires impériaux et éliminent discrètement quiconque menace leurs affaires. Leur mémoire des dettes est éternelle.",
+      "description": "Les grandes familles criminelles Hutts règnent sur l'Espace Hutt depuis des millénaires, tolérées par l'Empire qui préfère les corrompre que les envahir. La guerre civile galactique est pour elles une formidable opportunité commerciale.",
+      "color": "#ca8a04",
+      "initial_stability": 60
+    },
+    "CSA": {
+      "id": "CSA",
+      "name": "Autorité du Secteur Corporatif",
+      "flag": "🔷",
+      "capital": "Etti IV (Secteur Corporatif)",
+      "continent": "Secteur Corporatif",
+      "population": 300000000000,
+      "government_type": "Direxat corporatiste",
+      "ideology": "Ultra-capitalisme",
+      "leader": "L'ExO (Bureau Exécutif)",
+      "alliances": ["NEW_ORDER"],
+      "economy": {
+        "gdp": 1500000,
+        "gdp_per_capita": 5000,
+        "gdp_growth": 5.0,
+        "inflation": 4.0,
+        "unemployment": 3.0,
+        "debt_pct_gdp": 30.0,
+        "budget_balance_pct_gdp": 4.0,
+        "currency": "Crédits CSA",
+        "main_sectors": ["Extraction minière", "Finance", "Industrie lourde", "Commerce inter-sectoriel"],
+        "sectors": {"industrie": 45.0, "finance": 30.0, "commerce": 25.0}
+      },
+      "military": {
+        "strength": 4,
+        "active_personnel": 800000000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 12.0,
+        "equipment": {
+          "destroyers_victoire": 200,
+          "picketships": 3000,
+          "espos": 500000000,
+          "drones_de_securite": 10000000
+        }
+      },
+      "national_stats": {
+        "sovereignty": 55.0,
+        "food_autonomy": 45.0,
+        "energy_autonomy": 80.0,
+        "economic_independence": 90.0,
+        "security": 70.0
+      },
+      "relations": {
+        "EMPIRE": 50,
+        "REBELS": -40,
+        "HUTTS": 20,
+        "MANDO": 0,
+        "CHISS": 0
+      },
+      "personality_traits": ["pragmatique", "expansionniste", "corrompu"],
+      "personality": "L'Autorité ne connaît qu'une loi : le profit. Elle paie son tribut à l'Empire pour conserver son autonomie et réprime brutalement syndicats et rebelles sur ses mondes-usines. Toute négociation est un contrat, tout contrat a un prix.",
+      "description": "Enclave semi-autonome concédée par l'Empire aux grandes corporations, le Secteur Corporatif est un paradis des affaires et un enfer ouvrier. Sa flotte de sécurité protège ses routes commerciales avec zèle.",
+      "color": "#0ea5e9",
+      "initial_stability": 70
+    },
+    "MANDO": {
+      "id": "MANDO",
+      "name": "Clans Mandaloriens",
+      "flag": "🪖",
+      "capital": "Mandalore (Secteur de Mandalore)",
+      "continent": "Secteur de Mandalore",
+      "population": 4000000000,
+      "government_type": "Clans / Protectorat impérial contesté",
+      "ideology": "Culture guerrière (Resol'nare)",
+      "leader": "Chefs de clans rivaux",
+      "alliances": [],
+      "economy": {
+        "gdp": 60000,
+        "gdp_per_capita": 15000,
+        "gdp_growth": 1.0,
+        "inflation": 5.0,
+        "unemployment": 8.0,
+        "debt_pct_gdp": 40.0,
+        "budget_balance_pct_gdp": -2.0,
+        "currency": "Crédits",
+        "main_sectors": ["Mercenariat", "Armurerie (beskar)", "Chasse de primes", "Agriculture"],
+        "sectors": {"guerre": 40.0, "industrie": 35.0, "agriculture": 25.0}
+      },
+      "military": {
+        "strength": 5,
+        "active_personnel": 30000000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 25.0,
+        "equipment": {
+          "commandos_mandaloriens": 500000,
+          "chasseurs_kom_rk": 8000,
+          "croiseurs_keldabe": 40,
+          "armures_beskar": 1000000
+        }
+      },
+      "national_stats": {
+        "sovereignty": 45.0,
+        "food_autonomy": 60.0,
+        "energy_autonomy": 55.0,
+        "economic_independence": 50.0,
+        "security": 60.0
+      },
+      "relations": {
+        "EMPIRE": -30,
+        "REBELS": 10,
+        "HUTTS": 10,
+        "CSA": 0,
+        "CHISS": 0
+      },
+      "personality_traits": ["belliqueux", "fier", "indépendant"],
+      "personality": "Les Mandaloriens respectent la force et le courage, méprisent la lâcheté et la trahison. Divisés en clans rivaux depuis l'occupation impériale, ils peuvent servir de mercenaires à n'importe quel camp — mais nul ne soumet Mandalore impunément.",
+      "description": "Peuple guerrier légendaire, les clans mandaloriens vivent sous protectorat impérial de fait, mais la résistance couve. Leurs commandos en armure de beskar comptent parmi les meilleurs combattants de la galaxie.",
+      "color": "#6d28d9",
+      "initial_stability": 45
+    },
+    "CHISS": {
+      "id": "CHISS",
+      "name": "Ascendance Chiss",
+      "flag": "🔵",
+      "capital": "Csilla (Régions Inconnues)",
+      "continent": "Régions Inconnues",
+      "population": 90000000000,
+      "government_type": "Aristocratie des Familles Régnantes",
+      "ideology": "Isolationnisme / Défense préventive",
+      "leader": "Les Familles Régnantes (Aristocra)",
+      "alliances": [],
+      "economy": {
+        "gdp": 700000,
+        "gdp_per_capita": 7800,
+        "gdp_growth": 2.0,
+        "inflation": 1.5,
+        "unemployment": 4.0,
+        "debt_pct_gdp": 20.0,
+        "budget_balance_pct_gdp": 2.0,
+        "currency": "Monnaie de l'Ascendance",
+        "main_sectors": ["Technologie militaire", "Exploration", "Industrie", "Renseignement"],
+        "sectors": {"technologie": 40.0, "industrie": 35.0, "services": 25.0}
+      },
+      "military": {
+        "strength": 6,
+        "active_personnel": 400000000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 20.0,
+        "equipment": {
+          "croiseurs_chiss": 900,
+          "chasseurs_clawcraft": 60000,
+          "flotte_de_defense_expansionnaire": 12,
+          "postes_avances": 3000
+        }
+      },
+      "national_stats": {
+        "sovereignty": 90.0,
+        "food_autonomy": 75.0,
+        "energy_autonomy": 85.0,
+        "economic_independence": 85.0,
+        "security": 85.0
+      },
+      "relations": {
+        "EMPIRE": -10,
+        "REBELS": 0,
+        "HUTTS": 0,
+        "CSA": 0,
+        "MANDO": 0
+      },
+      "personality_traits": ["stratège", "prudent", "isolationniste"],
+      "personality": "Les Chiss n'attaquent jamais les premiers — mais leur doctrine de frappe préventive est d'une souplesse toute politique. Méthodiques, secrets et brillants tacticiens, ils observent la guerre civile galactique en calculant froidement leurs intérêts.",
+      "description": "Cachée dans les Régions Inconnues, l'Ascendance Chiss est une puissance disciplinée et technologiquement avancée que presque personne dans l'Empire ne connaît. Le légendaire stratège Thrawn est issu de ses rangs.",
+      "color": "#1e40af",
+      "initial_stability": 80
+    }
+  }
+}

@@ -285,7 +285,15 @@
         "COL": 65,
         "EGY": 40,
         "NGA": 45,
-        "ZAF": 50
+        "ZAF": 50,
+        "CPV": 45,
+        "MDV": 20,
+        "SGP": 60,
+        "BHR": 60,
+        "BRN": 40,
+        "FJI": 35,
+        "PNG": 35,
+        "TLS": 30
       },
       "personality_traits": [
         "assertif",
@@ -378,7 +386,18 @@
         "DEU": 30,
         "FRA": 30,
         "GBR": 25,
-        "AUS": 5
+        "AUS": 5,
+        "COM": 20,
+        "CPV": 25,
+        "MUS": 35,
+        "SYC": 30,
+        "STP": 25,
+        "MDV": 40,
+        "SGP": 45,
+        "BRN": 30,
+        "FJI": 35,
+        "PNG": 30,
+        "TLS": 25
       },
       "personality_traits": [
         "pragmatique",
@@ -560,7 +579,8 @@
         "CHN": 30,
         "TUR": 40,
         "UKR": 50,
-        "ISR": 60
+        "ISR": 60,
+        "MLT": 45
       },
       "personality_traits": [
         "multilatéraliste",
@@ -651,7 +671,11 @@
         "LBN": 55,
         "SYR": -50,
         "JPN": 60,
-        "IND": 50
+        "IND": 50,
+        "COM": 40,
+        "MUS": 50,
+        "SYC": 45,
+        "MLT": 45
       },
       "personality_traits": [
         "indépendant",
@@ -737,7 +761,13 @@
         "RUS": -50,
         "CHN": 20,
         "ARG": -20,
-        "IRL": 55
+        "IRL": 55,
+        "MUS": 45,
+        "SYC": 40,
+        "MLT": 55,
+        "SGP": 50,
+        "BHR": 50,
+        "BRN": 55
       },
       "personality_traits": [
         "atlantiste",
@@ -820,7 +850,9 @@
         "VNM": 50,
         "PHL": 55,
         "IDN": 50,
-        "MYS": 50
+        "MYS": 50,
+        "SGP": 55,
+        "PNG": 40
       },
       "personality_traits": [
         "pacifiste_révisionniste",
@@ -903,7 +935,12 @@
         "BRA": 45,
         "ZAF": 50,
         "IDN": 45,
-        "MYS": 40
+        "MYS": 40,
+        "MUS": 60,
+        "SYC": 50,
+        "MDV": 45,
+        "SGP": 45,
+        "FJI": 40
       },
       "personality_traits": [
         "non_aligné",
@@ -990,7 +1027,9 @@
         "DEU": 50,
         "IND": 45,
         "ZAF": 50,
-        "BOL": 50
+        "BOL": 50,
+        "CPV": 40,
+        "STP": 30
       },
       "personality_traits": [
         "diplomate",
@@ -1150,7 +1189,11 @@
         "IND": 60,
         "CHN": 30,
         "RUS": -40,
-        "IDN": 50
+        "IDN": 50,
+        "SGP": 55,
+        "FJI": 45,
+        "PNG": 60,
+        "TLS": 45
       },
       "personality_traits": [
         "atlantiste",
@@ -1386,7 +1429,10 @@
         "SGP": 65,
         "MYS": 60,
         "IND": 45,
-        "RUS": 25
+        "RUS": 25,
+        "BRN": 45,
+        "PNG": 30,
+        "TLS": 30
       },
       "personality_traits": [
         "non_aligné",
@@ -1472,7 +1518,9 @@
         "QAT": 50,
         "ISR": -50,
         "SYR": -40,
-        "RUS": -25
+        "RUS": -25,
+        "COM": 25,
+        "MDV": 40
       },
       "personality_traits": [
         "monarchique",
@@ -1638,7 +1686,8 @@
         "TUR": 50,
         "LBY": 40,
         "RUS": -25,
-        "CHN": 25
+        "CHN": 25,
+        "MLT": 60
       },
       "personality_traits": [
         "pro_européen",
@@ -1884,7 +1933,8 @@
         "BTS": 60,
         "USA": 45,
         "GBR": 50,
-        "EU": 50
+        "EU": 50,
+        "MUS": 40
       },
       "personality_traits": [
         "non_aligné",
@@ -1966,7 +2016,8 @@
         "ARE": -40,
         "TUR": 20,
         "PAK": 25,
-        "IND": 30
+        "IND": 30,
+        "BHR": -50
       },
       "personality_traits": [
         "révolutionnaire_islamique",
@@ -3367,7 +3418,8 @@
         "FRA": 60,
         "IRN": -40,
         "QAT": 55,
-        "TUR": 30
+        "TUR": 30,
+        "SYC": 35
       },
       "personality_traits": [
         "pragmatique",
@@ -3444,7 +3496,8 @@
         "SAU": 50,
         "IRN": 30,
         "EGY": -40,
-        "UAE": 55
+        "UAE": 55,
+        "BHR": 20
       },
       "personality_traits": [
         "diplomatie_active",
@@ -4644,7 +4697,10 @@
         "BEL": 55,
         "ITA": 60,
         "RUS": -20,
-        "MAR": 50
+        "MAR": 50,
+        "CPV": 65,
+        "STP": 60,
+        "TLS": 55
       },
       "personality_traits": [
         "atlantiste",
@@ -5911,7 +5967,8 @@
         "ITA": 55,
         "EGY": 50,
         "SAU": 45,
-        "QAT": 40
+        "QAT": 40,
+        "MLT": 30
       },
       "personality_traits": [
         "démocratique",
@@ -5985,7 +6042,8 @@
         "QAT": 25,
         "USA": 10,
         "FRA": 20,
-        "MAR": 25
+        "MAR": 25,
+        "MLT": 20
       },
       "personality_traits": [
         "fragmenté",
@@ -6139,7 +6197,8 @@
         "GBR": 50,
         "RWA": 35,
         "IND": 40,
-        "BRA": 38
+        "BRA": 38,
+        "COM": 30
       },
       "personality_traits": [
         "non_aligné",
@@ -6216,7 +6275,8 @@
         "ZMB": 45,
         "ZAF": 50,
         "FRA": 38,
-        "GBR": 35
+        "GBR": 35,
+        "STP": 45
       },
       "personality_traits": [
         "pétrolier",
@@ -7835,7 +7895,8 @@
         "AUS": 42,
         "SGP": 48,
         "MYS": 45,
-        "BGD": 48
+        "BGD": 48,
+        "MDV": 45
       },
       "personality_traits": [
         "post_conflit",
@@ -8147,7 +8208,8 @@
         "QAT": 60,
         "OMN": 62,
         "GBR": 60,
-        "FRA": 48
+        "FRA": 48,
+        "BHR": 55
       },
       "personality_traits": [
         "pro_américain",
@@ -8611,7 +8673,9 @@
         "CHN": 45,
         "SGP": 55,
         "IND": 50,
-        "KOR": 50
+        "KOR": 50,
+        "FJI": 45,
+        "PNG": 45
       },
       "personality_traits": [
         "atlantiste",
@@ -9420,7 +9484,8 @@
         "MLI": 40,
         "GMB": 35,
         "GIN": 40,
-        "GNB": 35
+        "GNB": 35,
+        "CPV": 35
       },
       "personality_traits": [
         "pro_français",
@@ -10591,7 +10656,8 @@
         "COG": 45,
         "CHN": 40,
         "USA": 40,
-        "AGO": 35
+        "AGO": 35,
+        "STP": 35
       },
       "personality_traits": [
         "pétrole",
@@ -11246,7 +11312,8 @@
         "ZAF": 45,
         "CHN": 40,
         "IND": 35,
-        "USA": 35
+        "USA": 35,
+        "COM": 35
       },
       "personality_traits": [
         "instable",
@@ -11620,6 +11687,885 @@
       "color": "#3E5EB9",
       "initial_stability": 44,
       "nation_brief": "[NATION BRIEF — Eswatini (Swaziland)]\n- Political landscape: King Mswati III ruling as Africa's last absolute monarch; political parties banned; traditional governance system; youth frustration growing.\n- Key challenges: World's highest HIV/AIDS prevalence (~27%), poverty (~63%), absolute monarchy limiting freedoms, youth unemployment, dependence on South Africa.\n- Economic situation: Small economy tied to South Africa (Southern African Customs Union revenues); sugar and soft drink concentrate exports; textile industry; growth ~1.7%."
+    },
+    "COM": {
+      "id": "COM",
+      "name": "Comores",
+      "flag": "🇰🇲",
+      "capital": "Moroni",
+      "continent": "Afrique",
+      "population": 796000,
+      "government_type": "présidentiel",
+      "ideology": "démocratie_fragile",
+      "leader": "Azali Assoumani",
+      "alliances": [],
+      "economy": {
+        "gdp": 1.0,
+        "gdp_per_capita": 1300,
+        "gdp_growth": 2.2,
+        "inflation": 1.8,
+        "unemployment": 20.0,
+        "debt_pct_gdp": 27.0,
+        "currency": "KMF",
+        "main_sectors": [
+          "agriculture",
+          "vanille",
+          "ylang-ylang",
+          "pêche"
+        ],
+        "sectors": {
+          "agriculture": 47.0,
+          "industrie": 12.0,
+          "services": 41.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 500,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 1.0,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 40.0,
+        "food_autonomy": 60.0,
+        "energy_autonomy": 15.0,
+        "economic_independence": 20.0
+      },
+      "relations": {
+        "FRA": 40,
+        "MDG": 35,
+        "TZA": 30,
+        "SAU": 25,
+        "CHN": 20
+      },
+      "personality_traits": [
+        "fragile",
+        "insulaire",
+        "dépendant_aide"
+      ],
+      "description": "Archipel de l'océan Indien marqué par une histoire de coups d'État, les Comores dépendent de l'agriculture d'exportation et de la diaspora. Revendique Mayotte, restée française.",
+      "color": "#3d8b37",
+      "initial_stability": 40
+    },
+    "CPV": {
+      "id": "CPV",
+      "name": "Cap-Vert",
+      "flag": "🇨🇻",
+      "capital": "Praia",
+      "continent": "Afrique",
+      "population": 540000,
+      "government_type": "parlementaire",
+      "ideology": "démocratie_libérale",
+      "leader": "Jorge Carlos Fonseca",
+      "alliances": [],
+      "economy": {
+        "gdp": 1.6,
+        "gdp_per_capita": 3000,
+        "gdp_growth": 3.9,
+        "inflation": 1.4,
+        "unemployment": 12.2,
+        "debt_pct_gdp": 126.0,
+        "currency": "CVE",
+        "main_sectors": [
+          "tourisme",
+          "services",
+          "pêche",
+          "transferts_diaspora"
+        ],
+        "sectors": {
+          "agriculture": 9.0,
+          "industrie": 18.0,
+          "services": 73.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 1200,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 0.6,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 60.0,
+        "food_autonomy": 20.0,
+        "energy_autonomy": 25.0,
+        "economic_independence": 30.0
+      },
+      "relations": {
+        "PRT": 65,
+        "USA": 45,
+        "BRA": 40,
+        "SEN": 35,
+        "CHN": 25
+      },
+      "personality_traits": [
+        "stable",
+        "démocratique",
+        "insulaire"
+      ],
+      "description": "Archipel atlantique lusophone, le Cap-Vert est l'une des démocraties les plus stables d'Afrique, tournée vers le tourisme et sa diaspora.",
+      "color": "#1e40af",
+      "initial_stability": 72
+    },
+    "MUS": {
+      "id": "MUS",
+      "name": "Maurice",
+      "flag": "🇲🇺",
+      "capital": "Port-Louis",
+      "continent": "Afrique",
+      "population": 1263000,
+      "government_type": "parlementaire",
+      "ideology": "démocratie_libérale",
+      "leader": "Anerood Jugnauth",
+      "alliances": [],
+      "economy": {
+        "gdp": 12.2,
+        "gdp_per_capita": 9600,
+        "gdp_growth": 3.8,
+        "inflation": 1.0,
+        "unemployment": 7.3,
+        "debt_pct_gdp": 65.0,
+        "currency": "MUR",
+        "main_sectors": [
+          "tourisme",
+          "finance",
+          "textile",
+          "sucre"
+        ],
+        "sectors": {
+          "agriculture": 4.0,
+          "industrie": 22.0,
+          "services": 74.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 2000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 0.2,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 65.0,
+        "food_autonomy": 30.0,
+        "energy_autonomy": 20.0,
+        "economic_independence": 55.0
+      },
+      "relations": {
+        "IND": 60,
+        "FRA": 50,
+        "GBR": 45,
+        "ZAF": 40,
+        "CHN": 35
+      },
+      "personality_traits": [
+        "stable",
+        "commerçant",
+        "diplomate"
+      ],
+      "description": "Île prospère de l'océan Indien, Maurice s'est diversifiée du sucre vers la finance offshore et le tourisme. Revendique l'archipel des Chagos face au Royaume-Uni.",
+      "color": "#dc2626",
+      "initial_stability": 78
+    },
+    "SYC": {
+      "id": "SYC",
+      "name": "Seychelles",
+      "flag": "🇸🇨",
+      "capital": "Victoria",
+      "continent": "Afrique",
+      "population": 94000,
+      "government_type": "présidentiel",
+      "ideology": "démocratie_libérale",
+      "leader": "James Michel",
+      "alliances": [],
+      "economy": {
+        "gdp": 1.4,
+        "gdp_per_capita": 15000,
+        "gdp_growth": 4.5,
+        "inflation": -1.0,
+        "unemployment": 4.0,
+        "debt_pct_gdp": 65.0,
+        "currency": "SCR",
+        "main_sectors": [
+          "tourisme",
+          "pêche",
+          "finance_offshore"
+        ],
+        "sectors": {
+          "agriculture": 2.5,
+          "industrie": 13.5,
+          "services": 84.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 400,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 1.3,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 55.0,
+        "food_autonomy": 25.0,
+        "energy_autonomy": 15.0,
+        "economic_independence": 40.0
+      },
+      "relations": {
+        "IND": 50,
+        "FRA": 45,
+        "GBR": 40,
+        "CHN": 30,
+        "ARE": 35
+      },
+      "personality_traits": [
+        "insulaire",
+        "touristique",
+        "stable"
+      ],
+      "description": "Micro-État de 115 îles, les Seychelles vivent du tourisme haut de gamme et de la pêche au thon, tout en luttant contre la piraterie dans l'océan Indien.",
+      "color": "#0ea5e9",
+      "initial_stability": 70
+    },
+    "STP": {
+      "id": "STP",
+      "name": "São Tomé-et-Príncipe",
+      "flag": "🇸🇹",
+      "capital": "São Tomé",
+      "continent": "Afrique",
+      "population": 200000,
+      "government_type": "semi_présidentiel",
+      "ideology": "démocratie_fragile",
+      "leader": "Evaristo Carvalho",
+      "alliances": [],
+      "economy": {
+        "gdp": 0.35,
+        "gdp_per_capita": 1750,
+        "gdp_growth": 4.0,
+        "inflation": 5.4,
+        "unemployment": 13.5,
+        "debt_pct_gdp": 93.0,
+        "currency": "STD",
+        "main_sectors": [
+          "cacao",
+          "agriculture",
+          "pêche",
+          "aide_internationale"
+        ],
+        "sectors": {
+          "agriculture": 12.0,
+          "industrie": 15.0,
+          "services": 73.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 300,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 0.8,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 40.0,
+        "food_autonomy": 45.0,
+        "energy_autonomy": 10.0,
+        "economic_independence": 18.0
+      },
+      "relations": {
+        "PRT": 60,
+        "AGO": 45,
+        "GAB": 35,
+        "BRA": 30,
+        "CHN": 25
+      },
+      "personality_traits": [
+        "fragile",
+        "insulaire",
+        "dépendant_aide"
+      ],
+      "description": "Petit archipel du golfe de Guinée, ancien comptoir cacaoyer portugais, qui espère des découvertes pétrolières offshore.",
+      "color": "#16a34a",
+      "initial_stability": 55
+    },
+    "MDV": {
+      "id": "MDV",
+      "name": "Maldives",
+      "flag": "🇲🇻",
+      "capital": "Malé",
+      "continent": "Asie",
+      "population": 428000,
+      "government_type": "présidentiel",
+      "ideology": "islamisme_modéré",
+      "leader": "Abdulla Yameen",
+      "alliances": [],
+      "economy": {
+        "gdp": 4.2,
+        "gdp_per_capita": 9800,
+        "gdp_growth": 6.2,
+        "inflation": 0.5,
+        "unemployment": 5.2,
+        "debt_pct_gdp": 60.0,
+        "currency": "MVR",
+        "main_sectors": [
+          "tourisme",
+          "pêche",
+          "construction"
+        ],
+        "sectors": {
+          "agriculture": 3.0,
+          "industrie": 16.0,
+          "services": 81.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 3000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 1.0,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 50.0,
+        "food_autonomy": 15.0,
+        "energy_autonomy": 10.0,
+        "economic_independence": 35.0
+      },
+      "relations": {
+        "IND": 45,
+        "CHN": 40,
+        "SAU": 40,
+        "LKA": 45,
+        "USA": 20
+      },
+      "personality_traits": [
+        "insulaire",
+        "touristique",
+        "vulnérable_climat"
+      ],
+      "description": "Archipel de l'océan Indien menacé par la montée des eaux, tiraillé entre l'influence indienne et chinoise, et vivant du tourisme de luxe.",
+      "color": "#0891b2",
+      "initial_stability": 55
+    },
+    "MLT": {
+      "id": "MLT",
+      "name": "Malte",
+      "flag": "🇲🇹",
+      "capital": "La Valette",
+      "continent": "Europe",
+      "population": 434000,
+      "government_type": "parlementaire",
+      "ideology": "démocratie_libérale",
+      "leader": "Joseph Muscat",
+      "alliances": [],
+      "economy": {
+        "gdp": 11.0,
+        "gdp_per_capita": 25300,
+        "gdp_growth": 5.5,
+        "inflation": 0.9,
+        "unemployment": 4.7,
+        "debt_pct_gdp": 58.0,
+        "currency": "EUR",
+        "main_sectors": [
+          "services_financiers",
+          "tourisme",
+          "jeux_en_ligne",
+          "transport_maritime"
+        ],
+        "sectors": {
+          "agriculture": 1.4,
+          "industrie": 12.0,
+          "services": 86.6
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 1900,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 0.5,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 55.0,
+        "food_autonomy": 20.0,
+        "energy_autonomy": 15.0,
+        "economic_independence": 50.0
+      },
+      "relations": {
+        "ITA": 60,
+        "GBR": 55,
+        "FRA": 45,
+        "DEU": 45,
+        "LBY": 20,
+        "TUN": 30
+      },
+      "personality_traits": [
+        "européen",
+        "commerçant",
+        "neutre"
+      ],
+      "description": "Plus petit État de l'Union européenne, Malte est un hub financier et maritime méditerranéen, en première ligne des routes migratoires.",
+      "color": "#b91c1c",
+      "initial_stability": 75
+    },
+    "SGP": {
+      "id": "SGP",
+      "name": "Singapour",
+      "flag": "🇸🇬",
+      "capital": "Singapour",
+      "continent": "Asie",
+      "population": 5607000,
+      "government_type": "parlementaire",
+      "ideology": "autoritarisme_libéral",
+      "leader": "Lee Hsien Loong",
+      "alliances": [],
+      "economy": {
+        "gdp": 318.0,
+        "gdp_per_capita": 56700,
+        "gdp_growth": 2.4,
+        "inflation": -0.5,
+        "unemployment": 2.1,
+        "debt_pct_gdp": 112.0,
+        "currency": "SGD",
+        "main_sectors": [
+          "finance",
+          "commerce",
+          "électronique",
+          "raffinage",
+          "port"
+        ],
+        "sectors": {
+          "agriculture": 0.0,
+          "industrie": 26.0,
+          "services": 74.0
+        }
+      },
+      "military": {
+        "strength": 4,
+        "active_personnel": 72000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 3.4,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 75.0,
+        "food_autonomy": 10.0,
+        "energy_autonomy": 5.0,
+        "economic_independence": 70.0
+      },
+      "relations": {
+        "USA": 60,
+        "CHN": 45,
+        "MYS": 40,
+        "IDN": 40,
+        "JPN": 55,
+        "AUS": 55,
+        "IND": 45,
+        "GBR": 50,
+        "BRN": 55
+      },
+      "personality_traits": [
+        "pragmatique",
+        "commerçant",
+        "stratège",
+        "technocratique"
+      ],
+      "description": "Cité-État hyper-développée au carrefour des routes maritimes mondiales, Singapour compense sa taille minuscule par une armée moderne, une diplomatie habile et une économie de premier plan.",
+      "color": "#e11d48",
+      "initial_stability": 85
+    },
+    "BHR": {
+      "id": "BHR",
+      "name": "Bahreïn",
+      "flag": "🇧🇭",
+      "capital": "Manama",
+      "continent": "Moyen-Orient",
+      "population": 1425000,
+      "government_type": "monarchie_absolue",
+      "ideology": "monarchie_du_golfe",
+      "leader": "Hamad ben Issa Al Khalifa",
+      "alliances": [],
+      "economy": {
+        "gdp": 32.2,
+        "gdp_per_capita": 22600,
+        "gdp_growth": 3.2,
+        "inflation": 2.8,
+        "unemployment": 4.0,
+        "debt_pct_gdp": 81.0,
+        "currency": "BHD",
+        "main_sectors": [
+          "finance",
+          "pétrole",
+          "aluminium",
+          "tourisme"
+        ],
+        "sectors": {
+          "agriculture": 0.3,
+          "industrie": 39.0,
+          "services": 60.7
+        }
+      },
+      "military": {
+        "strength": 2,
+        "active_personnel": 8200,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 4.6,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 45.0,
+        "food_autonomy": 10.0,
+        "energy_autonomy": 80.0,
+        "economic_independence": 50.0
+      },
+      "relations": {
+        "SAU": 75,
+        "ARE": 65,
+        "USA": 60,
+        "GBR": 50,
+        "IRN": -50,
+        "QAT": 20,
+        "KWT": 55
+      },
+      "personality_traits": [
+        "pro_occidental",
+        "monarchique",
+        "dépendant_saoudien"
+      ],
+      "description": "Petit royaume insulaire du Golfe, siège de la Ve flotte américaine, marqué par les tensions entre la monarchie sunnite et la majorité chiite depuis 2011.",
+      "color": "#be123c",
+      "initial_stability": 50
+    },
+    "BRN": {
+      "id": "BRN",
+      "name": "Brunei",
+      "flag": "🇧🇳",
+      "capital": "Bandar Seri Begawan",
+      "continent": "Asie",
+      "population": 423000,
+      "government_type": "monarchie_absolue",
+      "ideology": "monarchie_islamique",
+      "leader": "Hassanal Bolkiah",
+      "alliances": [],
+      "economy": {
+        "gdp": 11.4,
+        "gdp_per_capita": 27000,
+        "gdp_growth": -2.5,
+        "inflation": -0.7,
+        "unemployment": 6.9,
+        "debt_pct_gdp": 3.0,
+        "currency": "BND",
+        "main_sectors": [
+          "pétrole",
+          "gaz",
+          "services_publics"
+        ],
+        "sectors": {
+          "agriculture": 1.2,
+          "industrie": 56.6,
+          "services": 42.2
+        }
+      },
+      "military": {
+        "strength": 2,
+        "active_personnel": 7200,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 2.9,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 70.0,
+        "food_autonomy": 20.0,
+        "energy_autonomy": 100.0,
+        "economic_independence": 60.0
+      },
+      "relations": {
+        "MYS": 50,
+        "SGP": 55,
+        "IDN": 45,
+        "GBR": 55,
+        "CHN": 30,
+        "USA": 40
+      },
+      "personality_traits": [
+        "monarchique",
+        "rentier",
+        "discret"
+      ],
+      "description": "Sultanat pétrolier de Bornéo, richissime et paisible, dirigé d'une main ferme par l'une des plus anciennes monarchies au monde.",
+      "color": "#facc15",
+      "initial_stability": 75
+    },
+    "FJI": {
+      "id": "FJI",
+      "name": "Fidji",
+      "flag": "🇫🇯",
+      "capital": "Suva",
+      "continent": "Océanie",
+      "population": 899000,
+      "government_type": "parlementaire",
+      "ideology": "démocratie_fragile",
+      "leader": "Frank Bainimarama",
+      "alliances": [],
+      "economy": {
+        "gdp": 4.7,
+        "gdp_per_capita": 5200,
+        "gdp_growth": 2.4,
+        "inflation": 3.9,
+        "unemployment": 5.5,
+        "debt_pct_gdp": 47.0,
+        "currency": "FJD",
+        "main_sectors": [
+          "tourisme",
+          "sucre",
+          "pêche",
+          "textile"
+        ],
+        "sectors": {
+          "agriculture": 13.5,
+          "industrie": 17.4,
+          "services": 69.1
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 3500,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 1.6,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 60.0,
+        "food_autonomy": 55.0,
+        "energy_autonomy": 30.0,
+        "economic_independence": 40.0
+      },
+      "relations": {
+        "AUS": 45,
+        "NZL": 45,
+        "CHN": 35,
+        "IND": 40,
+        "USA": 35
+      },
+      "personality_traits": [
+        "insulaire",
+        "vulnérable_climat",
+        "post_putsch"
+      ],
+      "description": "Principal archipel du Pacifique Sud, les Fidji sortent d'une série de coups d'État et jouent l'équilibre entre l'Australie, la Chine et l'Inde.",
+      "color": "#67e8f9",
+      "initial_stability": 58
+    },
+    "PNG": {
+      "id": "PNG",
+      "name": "Papouasie-Nouvelle-Guinée",
+      "flag": "🇵🇬",
+      "capital": "Port Moresby",
+      "continent": "Océanie",
+      "population": 8085000,
+      "government_type": "parlementaire",
+      "ideology": "démocratie_fragile",
+      "leader": "Peter O'Neill",
+      "alliances": [],
+      "economy": {
+        "gdp": 20.0,
+        "gdp_per_capita": 2500,
+        "gdp_growth": 2.0,
+        "inflation": 6.7,
+        "unemployment": 2.5,
+        "debt_pct_gdp": 33.0,
+        "currency": "PGK",
+        "main_sectors": [
+          "mines",
+          "gaz_naturel",
+          "agriculture",
+          "forêts"
+        ],
+        "sectors": {
+          "agriculture": 22.1,
+          "industrie": 42.9,
+          "services": 35.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 3600,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 0.4,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 55.0,
+        "food_autonomy": 75.0,
+        "energy_autonomy": 70.0,
+        "economic_independence": 35.0
+      },
+      "relations": {
+        "AUS": 60,
+        "NZL": 45,
+        "IDN": 30,
+        "CHN": 30,
+        "USA": 35,
+        "JPN": 40
+      },
+      "personality_traits": [
+        "fragile",
+        "riche_en_ressources",
+        "fragmenté"
+      ],
+      "description": "État le plus peuplé du Pacifique insulaire, immensément riche en ressources mais fragmenté en centaines de groupes linguistiques, avec une question autonomiste à Bougainville.",
+      "color": "#d97706",
+      "initial_stability": 48
+    },
+    "TLS": {
+      "id": "TLS",
+      "name": "Timor oriental",
+      "flag": "🇹🇱",
+      "capital": "Dili",
+      "continent": "Asie",
+      "population": 1269000,
+      "government_type": "semi_présidentiel",
+      "ideology": "démocratie_fragile",
+      "leader": "Taur Matan Ruak",
+      "alliances": [],
+      "economy": {
+        "gdp": 1.4,
+        "gdp_per_capita": 1100,
+        "gdp_growth": 5.0,
+        "inflation": -1.3,
+        "unemployment": 11.0,
+        "debt_pct_gdp": 8.0,
+        "currency": "USD",
+        "main_sectors": [
+          "pétrole",
+          "café",
+          "agriculture",
+          "aide_internationale"
+        ],
+        "sectors": {
+          "agriculture": 17.0,
+          "industrie": 57.0,
+          "services": 26.0
+        }
+      },
+      "military": {
+        "strength": 1,
+        "active_personnel": 2000,
+        "nuclear_weapons": false,
+        "defense_budget_pct": 1.5,
+        "equipment": {
+          "chars_combat": 0,
+          "avions_chasse": 0,
+          "navires_guerre": 0,
+          "sous_marins": 0,
+          "helicopteres": 2,
+          "artillerie": 4
+        }
+      },
+      "national_stats": {
+        "sovereignty": 50.0,
+        "food_autonomy": 50.0,
+        "energy_autonomy": 85.0,
+        "economic_independence": 25.0
+      },
+      "relations": {
+        "IDN": 30,
+        "AUS": 45,
+        "PRT": 55,
+        "CHN": 25,
+        "USA": 30
+      },
+      "personality_traits": [
+        "jeune_état",
+        "fragile",
+        "dépendant_pétrole"
+      ],
+      "description": "Plus jeune nation d'Asie, indépendante de l'Indonésie depuis 2002, le Timor oriental dépend presque entièrement de son fonds pétrolier.",
+      "color": "#991b1b",
+      "initial_stability": 50
     }
   }
 }
